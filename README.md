@@ -12,6 +12,9 @@
 
 **A modern personal blog system** built with React + shadcn/ui frontend and Spring Boot backend, featuring rich text editing, media library management, and favorites sharing.
 
+[![Star](https://gitee.com/li78080114/navcoo-blog/badge/star.svg?theme=gitee)](https://gitee.com/li78080114/navcoo-blog)
+[![Fork](https://gitee.com/li78080114/navcoo-blog/badge/fork.svg?theme=gitee)](https://gitee.com/li78080114/navcoo-blog)
+
 </div>
 
 ---
