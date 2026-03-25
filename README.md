@@ -1,39 +1,93 @@
-# navcoo-blog
+# 个人博客系统
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+一个现代化的个人博客系统，采用 React + shadcn/ui 前端 + Spring Boot 后端架构。
 
-#### 软件架构
-软件架构说明
+## 功能特性
 
+- 📖 **文章浏览**：公开访问已发布的文章，无需登录
+- ✍️ **文章管理**：登录后可发布、编辑、删除文章
+- 🎨 **富文本编辑**：使用 AIEditor 实现文章编辑
+- 📊 **数据统计**：查看文章浏览量、分类统计等
+- 🎯 **现代化UI**：基于 shadcn/ui 的组件化设计
+- 🌙 **暗色模式**：支持暗色主题
+- 📱 **响应式设计**：完美适配各种设备
+- 📷 **媒体库**：图片上传管理与文章关联
+- ⭐ **收藏功能**：收藏喜欢的文章
 
-#### 安装教程
+## 技术栈
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### 前端
+- React 18 + TypeScript
+- Vite 构建工具
+- shadcn/ui 组件库
+- Tailwind CSS
+- AIEditor 富文本编辑器
+- Axios HTTP 客户端
 
-#### 使用说明
+### 后端
+- Spring Boot 3
+- Spring Security + JWT 认证
+- MyBatis-Plus
+- MySQL 数据库
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 快速开始
 
-#### 参与贡献
+### 1. 环境要求
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- Node.js 18+
+- JDK 17+
+- MySQL 8.0+
+- Maven 3.8+
 
+### 2. 数据库配置
 
-#### 特技
+创建 MySQL 数据库：
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```sql
+CREATE DATABASE blog CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+### 3. 启动后端
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+### 4. 启动前端
+
+```bash
+cd frontend
+pnpm install
+pnpm dev
+```
+
+### 5. 访问系统
+
+- 前台首页：http://localhost:5173
+- 管理后台：http://localhost:5173/admin
+- 默认管理员账号：`admin` / `admin123`
+
+## 项目结构
+
+```
+blog/
+├── frontend/                 # 前端项目
+│   ├── src/
+│   │   ├── components/      # React 组件
+│   │   ├── pages/           # 页面组件
+│   │   └── lib/             # 工具函数
+│   └── ...
+│
+└── backend/                 # 后端项目
+    └── src/main/java/com/blog/
+        ├── controller/      # REST API 控制器
+        ├── service/         # 业务逻辑层
+        ├── mapper/          # 数据访问层
+        ├── entity/          # 实体类
+        └── ...
+```
+
+## License
+
+MIT
