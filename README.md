@@ -1,60 +1,92 @@
 # 个人博客系统
 
-一个现代化的个人博客系统，采用 React + shadcn/ui 前端 + Spring Boot 后端架构。
+<div align="center">
 
-## 功能特性
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green?logo=spring)
+![MySQL](https://img.shields.io/badge/MySQL-8-orange?logo=mysql)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-- 📖 **文章浏览**：公开访问已发布的文章，无需登录
-- ✍️ **文章管理**：登录后可发布、编辑、删除文章
-- 🎨 **富文本编辑**：使用 AIEditor 实现文章编辑
-- 📊 **数据统计**：查看文章浏览量、分类统计等
-- 🎯 **现代化UI**：基于 shadcn/ui 的组件化设计
-- 🌙 **暗色模式**：支持暗色主题
-- 📱 **响应式设计**：完美适配各种设备
-- 📷 **媒体库**：图片上传管理与文章关联
-- ⭐ **收藏功能**：收藏喜欢的文章
+**一个现代化的个人博客系统**，采用 React + shadcn/ui 前端 + Spring Boot 后端架构，支持富文本编辑、媒体库管理、收藏分享等功能。
 
-## 技术栈
+</div>
 
-### 前端
-- React 18 + TypeScript
-- Vite 构建工具
-- shadcn/ui 组件库
-- Tailwind CSS
-- AIEditor 富文本编辑器
-- Axios HTTP 客户端
+## ✨ 功能特性
 
-### 后端
-- Spring Boot 3
-- Spring Security + JWT 认证
-- MyBatis-Plus
-- MySQL 数据库
+| 模块 | 功能 | 说明 |
+|:---|:---|:---|
+| 📖 **文章系统** | 浏览、发布、编辑、删除 | 支持富文本编辑，自动提取摘要 |
+| 🏷️ **分类标签** | 多级分类、标签管理 | 支持按分类/标签筛选文章 |
+| 📷 **媒体库** | 图片上传与管理 | 按文章分组，支持批量上传 |
+| 📊 **数据统计** | 浏览量、收藏量统计 | 实时统计文章热度 |
+| 🎨 **主题切换** | 亮色/暗色模式 | 一键切换，跟随系统 |
+| 🔐 **用户认证** | JWT 令牌登录 | 安全的认证机制 |
+| ⭐ **收藏分享** | 收藏文章、复制链接 | 便捷的内容分享 |
+| 🔖 **书签功能** | 浏览器书签 | 一键添加到浏览器书签 |
 
-## 快速开始
+## 🛠️ 技术栈
 
-### 1. 环境要求
+### 前端技术
 
-- Node.js 18+
-- JDK 17+
-- MySQL 8.0+
-- Maven 3.8+
+- **框架**：React 18 + TypeScript
+- **构建**：Vite 5
+- **组件库**：shadcn/ui + Radix UI
+- **样式**：Tailwind CSS
+- **编辑器**：AIEditor（富文本编辑）
+- **HTTP**：Axios
+- **国际化**：i18next
+- **状态管理**：Zustand
 
-### 2. 数据库配置
+### 后端技术
 
-创建 MySQL 数据库：
+- **框架**：Spring Boot 3
+- **安全**：Spring Security + JWT
+- **ORM**：MyBatis-Plus
+- **数据库**：MySQL 8.0
+- **构建**：Maven
+
+## 🚀 快速开始
+
+### 环境要求
+
+| 软件 | 版本 | 说明 |
+|:---|:---|:---|
+| Node.js | 18+ | 前端运行环境 |
+| JDK | 17+ | 后端运行环境 |
+| MySQL | 8.0+ | 数据库服务 |
+| Maven | 3.8+ | 后端构建工具 |
+| pnpm | 最新版 | 前端包管理器 |
+
+### 安装步骤
+
+**1. 克隆项目**
+
+```bash
+git clone https://gitee.com/li78080114/navcoo-blog.git
+cd navcoo-blog
+```
+
+**2. 配置数据库**
 
 ```sql
+-- 登录 MySQL
+mysql -u root -p
+
+-- 创建数据库
 CREATE DATABASE blog CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-### 3. 启动后端
+**3. 启动后端**
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-### 4. 启动前端
+后端启动后运行在 **http://localhost:8080**
+
+**4. 启动前端**
 
 ```bash
 cd frontend
@@ -62,32 +94,111 @@ pnpm install
 pnpm dev
 ```
 
-### 5. 访问系统
+前端启动后运行在 **http://localhost:5173**
 
-- 前台首页：http://localhost:5173
-- 管理后台：http://localhost:5173/admin
-- 默认管理员账号：`admin` / `admin123`
+**5. 访问系统**
 
-## 项目结构
+| 页面 | 地址 | 说明 |
+|:---|:---|:---|
+| 首页 | http://localhost:5173 | 博客文章列表 |
+| 管理后台 | http://localhost:5173/admin | 文章、分类、标签、媒体管理 |
+
+> **默认管理员账号**：`admin` / `admin123`
+
+## 📁 项目结构
 
 ```
-blog/
-├── frontend/                 # 前端项目
+navcoo-blog/
+├── frontend/                         # React 前端项目
 │   ├── src/
-│   │   ├── components/      # React 组件
-│   │   ├── pages/           # 页面组件
-│   │   └── lib/             # 工具函数
-│   └── ...
+│   │   ├── components/              # UI 组件
+│   │   │   ├── ui/                 # shadcn/ui 基础组件
+│   │   │   ├── editor/             # 富文本编辑器
+│   │   │   ├── layout/             # 布局组件
+│   │   │   └── media/              # 媒体选择器
+│   │   ├── pages/                  # 页面组件
+│   │   │   ├── admin/              # 管理后台页面
+│   │   │   ├── ArticlePage.tsx     # 文章详情
+│   │   │   ├── ArticlesPage.tsx     # 文章列表
+│   │   │   ├── HomePage.tsx        # 首页
+│   │   │   └── LoginPage.tsx       # 登录页
+│   │   ├── lib/                    # 工具函数
+│   │   │   └── api.ts              # API 接口封装
+│   │   ├── stores/                 # 状态管理
+│   │   └── types/                  # TypeScript 类型定义
+│   └── package.json
 │
-└── backend/                 # 后端项目
+└── backend/                         # Spring Boot 后端项目
     └── src/main/java/com/blog/
-        ├── controller/      # REST API 控制器
-        ├── service/         # 业务逻辑层
-        ├── mapper/          # 数据访问层
-        ├── entity/          # 实体类
-        └── ...
+        ├── controller/              # REST API 控制器
+        │   ├── ArticleController    # 文章接口
+        │   ├── AuthController       # 认证接口
+        │   ├── CategoryController   # 分类接口
+        │   ├── MediaController      # 媒体接口
+        │   └── ...
+        ├── service/                 # 业务逻辑层
+        ├── mapper/                  # 数据访问层
+        ├── entity/                  # 实体类
+        ├── dto/                     # 数据传输对象
+        ├── config/                  # 配置类
+        └── security/                # 安全相关
 ```
 
-## License
+## ⚙️ 配置说明
 
-MIT
+### 数据库配置
+
+编辑 `backend/src/main/resources/application.yml`：
+
+```yaml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: your_password
+```
+
+### API 地址配置
+
+编辑 `frontend/src/lib/api.ts`：
+
+```typescript
+const API_BASE = 'http://localhost:8080/api'
+```
+
+### 文件存储路径
+
+默认存储路径：`/Users/lirui/Documents/project/blog/uploads/`
+
+- `common/` — 公共媒体资源
+- `{articleId}/` — 归属于特定文章的媒体
+
+## ❓ 常见问题
+
+**Q: 后端启动失败，数据库连接错误？**
+
+确认 MySQL 服务已启动，且密码配置正确。
+
+**Q: 前端无法访问后端 API？**
+
+检查后端是否运行在 8080 端口，确认 CORS 配置正确。
+
+**Q: 图片上传失败？**
+
+检查 `uploads/` 目录是否存在且有写入权限。
+
+**Q: pnpm 安装依赖失败？**
+
+切换镜像源：`pnpm config set registry https://registry.npmmirror.com`
+
+## 📄 License
+
+本项目基于 [MIT License](LICENSE) 开源。
+
+---
+
+<div align="center">
+
+Made with ❤️ by [李睿](https://gitee.com/li78080114)
+
+</div>
