@@ -168,7 +168,17 @@ spring:
     url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: your_password
+  sql:
+    init:
+      mode: always        # 启动时自动初始化数据库
+      continue-on-error: true
 ```
+
+> **自动初始化说明 / Auto-initialization**：
+> - 启动后端时会自动执行 `init.sql` 脚本
+> - 仅创建不存在的表（使用 `IF NOT EXISTS`）
+> - 仅插入不存在的初始数据（使用 `INSERT IGNORE`）
+> - **不会删除已有数据**，可安全重复启动 / Won't delete existing data, safe to restart
 
 ### API 地址配置 / API Configuration
 
