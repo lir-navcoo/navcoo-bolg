@@ -233,11 +233,3 @@ const API_BASE = 'http://localhost:8080/api'
 | GitHub | https://github.com/lir-navcoo/navcoo-bolg |
 
 > 🌐 **English Version**: [README.en.md](README.en.md)
-
----
-
-<div align="center">
-
-Made with ❤️ by [李睿](https://github.com/lir-navcoo)
-
-</div>

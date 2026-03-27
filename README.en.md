@@ -239,11 +239,3 @@ This project is open source under [MIT License](LICENSE).
 | GitHub | https://github.com/lir-navcoo/navcoo-bolg |
 
 > 🌐 Chinese Version: [README.md](README.md)
-
----
-
-<div align="center">
-
-Made with ❤️ by [Li Rui](https://github.com/lir-navcoo)
-
-</div>
