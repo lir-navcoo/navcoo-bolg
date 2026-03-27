@@ -1,36 +1,256 @@
-# navcoo-blog
+# 个人博客系统 / Personal Blog System
 
-#### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+> 📖 **中文版** / Chinese Version: [README.md](README.md)
 
-#### Software Architecture
-Software architecture description
+<div align="center">
 
-#### Installation
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green?logo=spring)
+![MySQL](https://img.shields.io/badge/MySQL-8-orange?logo=mysql)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+**A modern personal blog system** built with React + shadcn/ui frontend and Spring Boot backend, featuring rich text editing, media library management, favorites sharing, and more.
 
-#### Instructions
+**一个现代化的个人博客系统**，采用 React + shadcn/ui 前端 + Spring Boot 后端架构，支持富文本编辑、媒体库管理、收藏分享等功能。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+[![Star](https://img.shields.io/badge/Star-GitHub-blue?logo=github)](https://github.com/lir-navcoo/navcoo-bolg)
+[![Fork](https://img.shields.io/badge/Fork-GitHub-blue?logo=github)](https://github.com/lir-navcoo/navcoo-bolg)
+[![Gitee Star](https://gitee.com/li78080114/navcoo-blog/badge/star.svg?theme=gitee)](https://gitee.com/li78080114/navcoo-blog)
+[![Gitee Fork](https://gitee.com/li78080114/navcoo-blog/badge/fork.svg?theme=gitee)](https://gitee.com/li78080114/navcoo-blog)
 
-#### Contribution
+</div>
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+---
 
+## ✨ Features
 
-#### Gitee Feature
+| Module | Feature | Description |
+|:---|:---|:---|
+| 📖 **Article System** | View, publish, edit, delete | Rich text editing with auto abstract extraction |
+| 🏷️ **Categories & Tags** | Multi-level categories, tag management | Filter articles by category or tag |
+| 📷 **Media Library** | Image upload & management | Grouped by article, batch upload supported |
+| 📊 **Statistics** | View & favorite counts | Real-time article popularity tracking |
+| 🎨 **Theme Toggle** | Light/Dark mode | One-click switch, follows system setting |
+| 🔐 **User Auth** | JWT token login | Secure authentication mechanism |
+| ⭐ **Favorites & Share** | Favorite articles, copy link | Easy content sharing |
+| 🔖 **Bookmark** | Browser bookmark | Add to browser bookmarks instantly |
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Framework**: React 18 + TypeScript
+- **Build**: Vite 5
+- **UI Library**: shadcn/ui + Radix UI
+- **Styling**: Tailwind CSS
+- **Editor**: AIEditor (Rich text editing)
+- **HTTP Client**: Axios
+- **i18n**: i18next
+- **State Management**: Zustand
+
+### Backend
+
+- **Framework**: Spring Boot 3
+- **Security**: Spring Security + JWT
+- **ORM**: MyBatis-Plus
+- **Database**: MySQL 8.0
+- **Build**: Maven
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+| Software | Version | Description |
+|:---|:---|:---|
+| Node.js | 18+ | Frontend runtime |
+| JDK | 17+ | Backend runtime |
+| MySQL | 8.0+ | Database service |
+| Maven | 3.8+ | Backend build tool |
+| pnpm | Latest | Frontend package manager |
+
+### Installation
+
+**1. Clone the project**
+
+```bash
+git clone https://github.com/lir-navcoo/navcoo-bolg.git
+# or
+git clone https://gitee.com/li78080114/navcoo-blog.git
+cd navcoo-blog
+```
+
+**2. Configure database**
+
+```sql
+-- Login to MySQL
+mysql -u root -p
+
+-- Create database
+CREATE DATABASE blog CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+**3. Start backend**
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+Backend runs at **http://localhost:8080**
+
+**4. Start frontend**
+
+```bash
+cd frontend
+pnpm install
+pnpm dev
+```
+
+Frontend runs at **http://localhost:5173**
+
+**5. Access the system**
+
+| Page | URL | Description |
+|:---|:---|:---|
+| Home | http://localhost:5173 | Blog article list |
+| Admin | http://localhost:5173/admin | Manage articles, categories, tags, media |
+
+> **Default admin account**: `admin` / `admin123`
+
+---
+
+## 📁 Project Structure
+
+```
+navcoo-blog/
+├── frontend/                         # React frontend project
+│   ├── src/
+│   │   ├── components/              # UI components
+│   │   │   ├── ui/                 # shadcn/ui base components
+│   │   │   ├── editor/             # Rich text editor
+│   │   │   ├── layout/             # Layout components
+│   │   │   └── media/              # Media selector
+│   │   ├── pages/                  # Page components
+│   │   │   ├── admin/              # Admin pages
+│   │   │   ├── ArticlePage.tsx     # Article detail
+│   │   │   ├── ArticlesPage.tsx     # Article list
+│   │   │   ├── HomePage.tsx        # Home page
+│   │   │   └── LoginPage.tsx       # Login page
+│   │   ├── lib/                    # Utilities
+│   │   │   └── api.ts              # API wrapper
+│   │   ├── stores/                 # State management
+│   │   └── types/                  # Type definitions
+│   └── package.json
+│
+└── backend/                         # Spring Boot backend
+    └── src/main/java/com/blog/
+        ├── controller/              # REST API controllers
+        │   ├── ArticleController    # Article API
+        │   ├── AuthController       # Auth API
+        │   ├── CategoryController   # Category API
+        │   ├── MediaController      # Media API
+        │   └── ...
+        ├── service/                 # Business logic layer
+        ├── mapper/                  # Data access layer
+        ├── entity/                  # Entities
+        ├── dto/                     # Data transfer objects
+        ├── config/                  # Configuration classes
+        └── security/                # Security related
+```
+
+---
+
+## ⚙️ Configuration
+
+### Database Configuration
+
+Edit `backend/src/main/resources/application.yml`:
+
+```yaml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: your_password
+  sql:
+    init:
+      mode: always        # Auto-initialize database on startup
+      continue-on-error: true
+```
+
+> **Auto-initialization notes**:
+> - Backend automatically executes `init.sql` on startup
+> - Only creates tables that don't exist (using `IF NOT EXISTS`)
+> - Only inserts initial data that doesn't exist (using `INSERT IGNORE`)
+> - **Won't delete existing data**, safe to restart
+
+### API Configuration
+
+Edit `frontend/src/lib/api.ts`:
+
+```typescript
+const API_BASE = 'http://localhost:8080/api'
+```
+
+### File Storage
+
+Default path: `/Users/lirui/Documents/project/blog/uploads/`
+
+- `common/` — Public media files
+- `{articleId}/` — Article-specific media
+
+---
+
+## ❓ FAQ
+
+**Q: Backend fails to start, database connection error?**
+
+Make sure MySQL is running and the password is configured correctly.
+
+---
+
+**Q: Frontend cannot access backend API?**
+
+Check if backend is running on port 8080 and CORS is configured correctly.
+
+---
+
+**Q: Image upload fails?**
+
+Check if the `uploads/` directory exists and has write permissions.
+
+---
+
+**Q: pnpm install fails?**
+
+Switch mirror: `pnpm config set registry https://registry.npmmirror.com`
+
+---
+
+## 📄 License
+
+This project is open source under [MIT License](LICENSE).
+
+---
+
+## 🔗 Links
+
+| Platform | Repository |
+|:---|:---|
+| GitHub | https://github.com/lir-navcoo/navcoo-bolg |
+| Gitee | https://gitee.com/li78080114/navcoo-blog |
+
+> 🌐 **中文版** / Chinese Version: [README.md](README.md)
+
+---
+
+<div align="center">
+
+Made with ❤️ by [李睿](https://gitee.com/li78080114)
+
+</div>

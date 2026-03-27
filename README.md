@@ -1,5 +1,7 @@
 # 个人博客系统 / Personal Blog System
 
+> 🌐 **English Version** / 英文版: [README.en.md](README.en.md)
+
 <div align="center">
 
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
@@ -229,6 +231,17 @@ const API_BASE = 'http://localhost:8080/api'
 ## 📄 License
 
 本项目基于 [MIT License](LICENSE) 开源。/ This project is open source under [MIT License](LICENSE).
+
+---
+
+## 🔗 相关链接 / Links
+
+| 平台 Platform | 仓库地址 Repository |
+|:---|:---|
+| GitHub | https://github.com/lir-navcoo/navcoo-bolg |
+| Gitee | https://gitee.com/li78080114/navcoo-blog |
+
+> 🌐 **English Version** / 英文版: [README.en.md](README.en.md)
 
 ---
 
