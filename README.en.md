@@ -1,6 +1,6 @@
 # Personal Blog System
 
-> 🌐 中文版: [README.md](README.md)
+> 🌐 **简体中文**: [README.md](README.md)
 
 <div align="center">
 
@@ -238,4 +238,4 @@ This project is open source under [MIT License](LICENSE).
 |:---|:---|
 | GitHub | https://github.com/lir-navcoo/navcoo-bolg |
 
-> 🌐 中文版: [README.md](README.md)
+> 🌐 **简体中文**: [README.md](README.md)

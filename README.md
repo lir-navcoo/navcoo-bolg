@@ -1,6 +1,6 @@
 # 个人博客系统
 
-> 🌐 **英文版**: [README.en.md](README.en.md)
+> 🌐 **English**: [README.en.md](README.en.md)
 
 <div align="center">
 
@@ -232,4 +232,4 @@ const API_BASE = 'http://localhost:8080/api'
 |:---|:---|
 | GitHub | https://github.com/lir-navcoo/navcoo-bolg |
 
-> 🌐 **英文版**: [README.en.md](README.en.md)
+> 🌐 **English**: [README.en.md](README.en.md)
