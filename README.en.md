@@ -1,6 +1,6 @@
-# 个人博客系统 / Personal Blog System
+# Personal Blog System
 
-> 📖 **中文版** / Chinese Version: [README.md](README.md)
+> 🌐 Chinese Version: [README.md](README.md)
 
 <div align="center">
 
@@ -12,12 +12,8 @@
 
 **A modern personal blog system** built with React + shadcn/ui frontend and Spring Boot backend, featuring rich text editing, media library management, favorites sharing, and more.
 
-**一个现代化的个人博客系统**，采用 React + shadcn/ui 前端 + Spring Boot 后端架构，支持富文本编辑、媒体库管理、收藏分享等功能。
-
 [![Star](https://img.shields.io/badge/Star-GitHub-blue?logo=github)](https://github.com/lir-navcoo/navcoo-bolg)
 [![Fork](https://img.shields.io/badge/Fork-GitHub-blue?logo=github)](https://github.com/lir-navcoo/navcoo-bolg)
-[![Gitee Star](https://gitee.com/li78080114/navcoo-blog/badge/star.svg?theme=gitee)](https://gitee.com/li78080114/navcoo-blog)
-[![Gitee Fork](https://gitee.com/li78080114/navcoo-blog/badge/fork.svg?theme=gitee)](https://gitee.com/li78080114/navcoo-blog)
 
 </div>
 
@@ -79,9 +75,7 @@
 
 ```bash
 git clone https://github.com/lir-navcoo/navcoo-bolg.git
-# or
-git clone https://gitee.com/li78080114/navcoo-blog.git
-cd navcoo-blog
+cd navcoo-bolg
 ```
 
 **2. Configure database**
@@ -199,7 +193,7 @@ const API_BASE = 'http://localhost:8080/api'
 
 ### File Storage
 
-Default path: `/Users/lirui/Documents/project/blog/uploads/`
+Default path: `{project-root}/uploads/`
 
 - `common/` — Public media files
 - `{articleId}/` — Article-specific media
@@ -243,14 +237,13 @@ This project is open source under [MIT License](LICENSE).
 | Platform | Repository |
 |:---|:---|
 | GitHub | https://github.com/lir-navcoo/navcoo-bolg |
-| Gitee | https://gitee.com/li78080114/navcoo-blog |
 
-> 🌐 **中文版** / Chinese Version: [README.md](README.md)
+> 🌐 Chinese Version: [README.md](README.md)
 
 ---
 
 <div align="center">
 
-Made with ❤️ by [李睿](https://gitee.com/li78080114)
+Made with ❤️ by [Li Rui](https://github.com/lir-navcoo)
 
 </div>
